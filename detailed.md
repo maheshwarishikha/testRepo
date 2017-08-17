@@ -48,10 +48,26 @@ In this journey we will demonstrate:
 
 ## Key Features
 
-* Triggering IBM Data Science Experience code execution from Node-RED
-* Creation of a web user interface using Node-RED
+* Sensors collect and transmit data on a continuous basis which is Time stamped. Method for detecting Change point in Sensor data.
+* Execute R statistical functions in Jupyter Notebook to detect Change point in data.
+* The solution will work perfectly for any type of sensor.
 
 ## Rationale
+
+As IoT solutions emerge, the amount of available sensor data is growing, but developing insight into that data can be difficult. Analyzing historical data is often the first step in understanding data you intend to use in real time. You may want to perform some basic statistics on your data to find 
+
+it usually requires real-time analysis and decision making. The traditional approach is to use a rules-based engine, which triggers alerts according to some manually configured thresholds. These systems lack data fusion and learning capabilities and therefore fail to cope with large amounts of complex high dimensional data.
+
+
+This journey utilizes IoT sensor data and its primary goal is to statistically identify the change point in this sensor data rather than the acquisition and storage of the data itself. For sake of completeness of the flow, a simulation of the IoT data acquisition is included as a first step.
+
+* Data acquisition and storage of IoT Sensor data using Node Red flows and DB2
+* Data retrieval and statistical analysis using R - Jupyter notebooks to analyze and detect change points in the data
+
+    Read Sensor data for a single sensor
+    Extract 2 Time series datasets one in the past and another in the present
+    Compress these datasets by translating them into a bunch of statistics that accurately describe the characteristics of these datasets
+    Compare these statistics and quantify them Analyze these comparisons to detect any occurrence of Change points in the data between Previous data set and Current data set
 
 The Data Science Experience (DSX) is designed to be used by Data Scientists.  It cannot be used to demonstrate a complete solution with a custom user interface.
 
@@ -74,8 +90,7 @@ This journey shows how we can use Node-RED to quickly develop a complete analyti
 
 ### Community and Advocacy
 
-* Customers interested in doing statistical analysis
-building a end to end analytics solution with a custom web user interface
+* Customers interested in doing statistical analysis of time stamped sensor data.
 * Node-RED has nodes that support integration with many database services, watson services and analytics services. With minimal programming effort,the developers can improve the solution using other services with Node-RED. It opens a world of possibilities for developers. 
 * Node-RED reduces a lot of development effort. 
 
