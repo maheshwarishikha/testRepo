@@ -42,7 +42,7 @@ In this journey we will demonstrate:
 ## Related Technologies
 
 * [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
+* [R](https://www.r-project.org/): R is an open source programming language and software environment for statistical computing and graphics that is supported by the R Foundation for Statistical Computing.
 * [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 
 
