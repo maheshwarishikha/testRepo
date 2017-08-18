@@ -48,13 +48,48 @@ In this journey we will demonstrate:
 
 ## Key Features
 
-* Sensors collect and transmit data on a continuous basis which is Time stamped. Method for detecting Change point in Sensor data.
+* Method for detecting Change point in Time stamped Sensor data.
 * Execute R statistical functions in Jupyter Notebook to detect Change point in data.
-* The solution will work perfectly for any type of sensor.
+* Works as-is for any type of sensor.
+* All components are made completely configurable so that multiple experiments can be repeated by tweaking the parameters.
 
 ## Rationale
 
+As IoT solutions emerge, the amount of available sensor data is growing. Sensors collect and transmit data on a continuous basis which is Time stamped. It usually requires real-time analysis and decision making. The traditional approach is to use a rules-based engine, which triggers alerts according to some manually configured thresholds. The statistical method for detecting Change point in Sensor data will be beneficial to get more accurate results for time series data.
+
+This journey helps in collating statistics on such Time series data and identify if a Change point has occurred.
+
+## Journey Hypothesis
+
+### Opportunity
+
+* Data scientist and IoT solution developers who wants to experiment, learn, enhance and implement a new method for Statistically detecting Change point in Sensor data.
+
+### Operational Efficiency
+
+* Data retrieval and statistical analysis using R - Jupyter notebooks to analyze data.
+* Highlights developer productivity – minimal programming effort and reduced development time.
+
+### Community and Advocacy
+
+* Customers interested in doing statistical analysis of time stamped sensor data.
+* All components are made completely configurable so that the developers can do multiple experiments by tweaking the parameters. It opens a world of possibilities for developers.
+* IBM Data Science Experience provides an environment where the developers can collaborate to analyze and visualize their data with Jupyter notebooks that run on Spark. RStudio, included in IBM Data Science Experience, provides an IDE for working with R. It reduces a lot of configuration and development effort and increses productivity.
+
+### Amplification
+
+* Opens up the channel to do more statisitical analysis using Data Science Experience to analyze IoT sensor data.
+* Demos at target conferences and meetups to find partners.
+* Integrate with other Bluemix services to add more insights and deliver the solution.
+
+### Competition
+
+***** The other solutions to integrate IBM Data Science experience with a custom UI is time consuming to build but can offer more flexibility
+
+## Concept
 As IoT solutions emerge, the amount of available sensor data is growing, but developing insight into that data can be difficult. Analyzing historical data is often the first step in understanding data you intend to use in real time. You may want to perform some basic statistics on your data to find 
+
+Sensors collect and transmit data on a continuous basis which is Time stamped. Method for detecting Change point in Sensor data.
 
 it usually requires real-time analysis and decision making. The traditional approach is to use a rules-based engine, which triggers alerts according to some manually configured thresholds. These systems lack data fusion and learning capabilities and therefore fail to cope with large amounts of complex high dimensional data.
 
@@ -68,44 +103,6 @@ This journey utilizes IoT sensor data and its primary goal is to statistically i
     Extract 2 Time series datasets one in the past and another in the present
     Compress these datasets by translating them into a bunch of statistics that accurately describe the characteristics of these datasets
     Compare these statistics and quantify them Analyze these comparisons to detect any occurrence of Change points in the data between Previous data set and Current data set
-
-The Data Science Experience (DSX) is designed to be used by Data Scientists.  It cannot be used to demonstrate a complete solution with a custom user interface.
-
-This journey shows how we can use Node-RED to quickly develop a complete analytics solution on DSX without much programming effort, and consisting of:
-*	A custom web user interface
-*	Orchestration of a workflow on DSX triggered from the custom web user interface
-*	Visualization of response from DSX on the custom web user interface
-
-## Journey Hypothesis
-
-### Opportunity
-
-* Data scientist and IoT solution developers who need to build statistically detecting Change point in Sensor data using DSX.
-
-### Operational Efficiency
-
-* Data retrieval and statistical analysis using R - Jupyter notebooks to analyze data
-
-* Highlights developer productivity – minimal programming effort and reduced development time
-
-### Community and Advocacy
-
-* Customers interested in doing statistical analysis of time stamped sensor data.
-* Node-RED has nodes that support integration with many database services, watson services and analytics services. With minimal programming effort,the developers can improve the solution using other services with Node-RED. It opens a world of possibilities for developers. 
-* Node-RED reduces a lot of development effort. 
-
-### Amplification
-
-* Develop end to end analytics solutions with custom user interface on IBM Data Science Experience quickly and promote them 
-* Demos at target conferences and meetups to find partners
-* Integrate with other Bluemix services to add more insights and deliver the solution
-
-### Competition
-
-* The other solutions to integrate IBM Data Science experience with a custom UI is time consuming to build but can offer more flexibility
-
-## Concept
-
 ### What is the Journey?
 
 This project shows how Node-RED can be used to build a complete end to end analytics solution on IBM Data Science Experience(DSX) with a custom web user interface.
@@ -120,7 +117,7 @@ The steps are detailed below:
 
 ### Who is it for?
 
-UI Developers, Data scientist and cognitive solution developers who need to build an end to end data analytics solution.
+IoT Solution Developers and Data scientist who who wants to learn, enhance and implement a new method for Statistically detecting Change point in Sensor data.
 
 ### What will they learn?
 From this journey, the developers will learn - 
@@ -150,7 +147,7 @@ This journey solves the need to develop a complete end to end analytics solution
 
 ## What is the advocacy potential?
 
-The potential is high. It demonstrates the ability to quickly add a custom user interface to IBM Data Science Experience. 
+The potential is high. It demonstrates the ability to do statistical analysis using IBM Data Science Experience. 
 
 ## What are some target events or meetups?
 
