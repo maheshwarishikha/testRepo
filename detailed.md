@@ -48,7 +48,7 @@ In this journey we will demonstrate:
 
 ## Key Features
 
-* Method for detecting Change point in Time stamped Sensor data.
+* Statistical method for detecting Change point in Time stamped Sensor data.
 * Execute R statistical functions in Jupyter Notebook to detect Change point in data.
 * Works as-is for any type of sensor.
 * All components are made completely configurable so that multiple experiments can be repeated by tweaking the parameters.
@@ -57,7 +57,7 @@ In this journey we will demonstrate:
 
 As IoT solutions emerge, the amount of available sensor data is growing. Sensors collect and transmit data on a continuous basis which is Time stamped. It usually requires real-time analysis and decision making. The traditional approach is to use a rules-based engine, which triggers alerts according to some manually configured thresholds. The statistical method for detecting Change point in Sensor data will be beneficial to get more accurate results for time series data.
 
-This journey helps in collating statistics on such Time series data and identify if a Change point has occurred.
+This journey helps in collating statistics on the Time series data and identify if a Change point has occurred.
 
 ## Journey Hypothesis
 
@@ -128,7 +128,7 @@ IoT Solution Developers and Data scientist who who wants to learn, enhance and i
 
 Sensors mounted on devices like IoT devices, Automated manufacturing like Robot arms, Process monitoring and Control equipment etc., collect and transmit data on a continuous basis which is Time stamped. The amount of available sensor data is continuously growing and it requires real-time analysis. Change point detection is used to detect any abrupt changes in Time Series data. Traiditional Change point detection that are implemented use Rule based methods that compare 2 data points or sets of 2 time series to compare and detect if there is a significant change that had taken place. This Journey uses Statistical approach to detect such change points.
 
-This journey helps in collating statistics on such Time series data and identify if a Change point has occurred. The feedback has been positive with SI partners - Cap Gemini, Infosys, Tech Mahindra, Wipro.
+This journey helps in collating statistics on the Time series data and identify if a Change point has occurred. The feedback has been positive with SI partners - Cap Gemini, Infosys, Tech Mahindra, Wipro.
 
 ## What is the advocacy potential?
 
