@@ -74,7 +74,7 @@ This journey helps in collating statistics on such Time series data and identify
 
 * Customers interested in doing statistical analysis of time stamped sensor data.
 * All components are made completely configurable so that the developers can do multiple experiments by tweaking the parameters. It opens a world of possibilities for developers.
-* IBM Data Science Experience provides an environment where the developers can collaborate to analyze and visualize their data with Jupyter notebooks that run on Spark. RStudio, included in IBM Data Science Experience, provides an IDE for working with R. It reduces a lot of configuration and development effort and increses productivity.
+* IBM Data Science Experience provides an environment where the developers can collaborate to analyze and visualize their data with Jupyter notebooks that run on Spark. RStudio, included in IBM Data Science Experience, provides an IDE for working with R. It reduces a lot of configuration and development effort and increases productivity.
 
 ### Amplification
 
@@ -87,63 +87,48 @@ This journey helps in collating statistics on such Time series data and identify
 ***** The other solutions to integrate IBM Data Science experience with a custom UI is time consuming to build but can offer more flexibility
 
 ## Concept
-As IoT solutions emerge, the amount of available sensor data is growing, but developing insight into that data can be difficult. Analyzing historical data is often the first step in understanding data you intend to use in real time. You may want to perform some basic statistics on your data to find 
 
-Sensors collect and transmit data on a continuous basis which is Time stamped. Method for detecting Change point in Sensor data.
-
-it usually requires real-time analysis and decision making. The traditional approach is to use a rules-based engine, which triggers alerts according to some manually configured thresholds. These systems lack data fusion and learning capabilities and therefore fail to cope with large amounts of complex high dimensional data.
-
-
-This journey utilizes IoT sensor data and its primary goal is to statistically identify the change point in this sensor data rather than the acquisition and storage of the data itself. For sake of completeness of the flow, a simulation of the IoT data acquisition is included as a first step.
-
-* Data acquisition and storage of IoT Sensor data using Node Red flows and DB2
-* Data retrieval and statistical analysis using R - Jupyter notebooks to analyze and detect change points in the data
-
-    Read Sensor data for a single sensor
-    Extract 2 Time series datasets one in the past and another in the present
-    Compress these datasets by translating them into a bunch of statistics that accurately describe the characteristics of these datasets
-    Compare these statistics and quantify them Analyze these comparisons to detect any occurrence of Change points in the data between Previous data set and Current data set
 ### What is the Journey?
 
-This project shows how Node-RED can be used to build a complete end to end analytics solution on IBM Data Science Experience(DSX) with a custom web user interface.
+Change point detection is used to detect any abrupt changes in Time Series data. Specifically, in IoT Sensor data the applications are very wide. This journey takes you through end to end flow of steps in collating statistics on such Time series data and identify if a Change point has occurred. R statistical software is used in this Journey with sample Sensor data loaded into the Data Science experience cloud. 
+
+This journey leverages Node-RED in IBM Bluemix and R Spark services in IBM Data science experience at its core to implement.
 
 The steps are detailed below:
-* The documents that require analysis are stored in Bluemix Object Storage.
-* The python code retrieves the document content from Object storage.
-* An event is triggered from the Web UI.
-* The event is sent to the python code using web sockets.
-* After the python code is executed on DSX, the response is sent to the websocket.
-* The UI reads the response on the websocket and displays the results.
+	
+1. Collects data from a IoT Sensor source (IoT sensor data acquisition is simulated in this journey through Node-RED) and injects into a DB2 database in cloud.
+2. Extract 2 Time series datasets one in the past and another in the present.
+3. Compress these datasets by translating them into a bunch of statistics that accurately describe the characteristics of these datasets.
+4. Compare these statistics and quantify them Analyze these comparisons to detect any occurrence of Change points in the data between Previous data set and Current data set.
 
 ### Who is it for?
 
 IoT Solution Developers and Data scientist who who wants to learn, enhance and implement a new method for Statistically detecting Change point in Sensor data.
 
 ### What will they learn?
-From this journey, the developers will learn - 
-*	Development on Data Science Experience using Python Pandas to derive insights on the data.
-*	Development of a web user interface using Node-RED. 
-* Triggering an analytics workflow on DSX from the UI and orchestration of the flow using Node-RED.
-*	Visualization of the results from DSX on a custom web user interface
+* Development using R statistical functions written in R Spark – Jupyter Notebook in IBM Data Science Experience.
+* Write data from a IoT source to a database using Node-RED.
+* Execution of R statistical functions to detect Change point in data.
+* ****Visualization of the results from DSX.
 
 ## What does it look like?
 
-1. Provision Node-RED starter, Object Storage, Apache Spark Service
-2. Store data documents in Object storage. 
-3. Import the Jupyter notebook  into Data Science Experience. Enter credentials for Object storage and change web socket URL.
-4. Import the Node-RED flow json into the Node-RED editor. Change the websocket URL and Deploy the Node-RED flow.
-5. Execute all cells in the Jupyter notebook to start the web socket client.
-6. The custom web user interface is rendered by Node-RED and is ready for use.
+1. Provision Node-RED starter, Object Storage, DB2 Warehouse on Cloud, Internet of Things Platform, Apache Spark Service.
+2. Store sensor data documents in Object storage.
+3. Add object storage and watson IoT nodes in Node-RED editor.
+4. Import the Node-RED flow json into the Node-RED editor. Configure (set credentials) for object storage, Watson IoT, IBM IoT, and dashDB node. Deploy the Node-RED flow.
+5. Import the Jupyter notebook into Data Science Experience. Change DB2 Warehouse on Cloud credentials.****
+6. Upload the sample .json DSX configuration file to Object storage.
+7. Execute the notebook.
+8. Outputs the results in the Notebook which can be copied to clipboard and visualize.
 
 # Strategy
 
 ## What is the strategy?
 
-The Data Science Experience (DSX) is designed to be used by Data Scientists.  It cannot be used to demonstrate the complete solution with a custom user interface.
+Sensors mounted on devices like IoT devices, Automated manufacturing like Robot arms, Process monitoring and Control equipment etc., collect and transmit data on a continuous basis which is Time stamped. The amount of available sensor data is continuously growing and it requires real-time analysis. Change point detection is used to detect any abrupt changes in Time Series data. Traiditional Change point detection that are implemented use Rule based methods that compare 2 data points or sets of 2 time series to compare and detect if there is a significant change that had taken place. This Journey uses Statistical approach to detect such change points.
 
-This journey solves the need to develop a complete end to end analytics solution on IBM Data Science Experience that can be demonstrated. The feedback has been positive with SI partners - Cap Gemini, Infosys, Tech Mahindra, Wipro.
-
-
+This journey helps in collating statistics on such Time series data and identify if a Change point has occurred. The feedback has been positive with SI partners - Cap Gemini, Infosys, Tech Mahindra, Wipro.
 
 ## What is the advocacy potential?
 
