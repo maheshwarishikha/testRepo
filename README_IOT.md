@@ -62,7 +62,7 @@ Developer can reuse all components that support the above steps like
 
 * [DB2 Warehouse on cloud](https://console.bluemix.net/catalog/services/db2-warehouse-on-cloud): IBM Db2 Warehouse on Cloud is a fully-managed, enterprise-class, cloud data warehouse service. Powered by IBM BLU Acceleration.
 
-* [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
 * [Internet of Things Platform](https://console.bluemix.net/catalog/services/internet-of-things-platform): This service is the hub for IBM Watson IoT and lets you communicate with and consume data from connected devices and gateways. Use the built-in web console dashboards to monitor your IoT data and analyze it in real time.
 
@@ -93,14 +93,14 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 ## 2. Create Bluemix services
 
 Create the following Bluemix service by following the link to use the Bluemix UI and create it.
-  * [**Object Storage in Blue mix**](https://console.bluemix.net/docs/services/ObjectStorage/index.html)  
+  * [**Object Storage in Bluemix**](https://console.ng.bluemix.net/catalog/services/object-storage)  
     ![png](doc/source/images/cpd_bmx_objstorage_menu.png)  
     
     1. Choose the region and create a Container unit
     2. Upload the sample data file in Object storage Container
     
 
-  * [**DB2 Warehouse on Cloud**](https://www.youtube.com/watch?v=CMFo4EtQ_ao)
+  * [**DB2 Warehouse on Cloud**](https://console.bluemix.net/catalog/services/db2-warehouse-on-cloud)
 
     ![](doc/source/images/cpd_db2whs_onbluemix.png)
 
@@ -113,23 +113,39 @@ Create the following Bluemix service by following the link to use the Bluemix UI
  
 ## 3. Create Node-RED App and inject IoT data
 
-Create the Node-RED starter App
+Create the Node-RED Starter application by following the link. Choose an appropriate name for the Node-RED application - `App name:`. Click on `Create`.
 
-![png](doc/source/images/cpd_bmx_nodered_menu.png)
-![png](doc/source/images/cpd_bmx_nodered_create.png)
+  * [**Node-RED Starter**](https://console.bluemix.net/catalog/starters/node-red-starter)
+  
+  ![png](doc/source/images/cpd_bmx_nodered_menu.png)
+  ![png](doc/source/images/cpd_bmx_nodered_create.png)
+  
+  * On the newly created Node-RED application page, Click on `Visit App URL` to launch the Node-RED editor once the application is in `Running` state.
+  * On the `Welcome to your new Node-RED instance on IBM Bluemix` screen, Click on `Next`
+  * On the `Secure your Node-RED editor` screen, enter a username and password to secure the Node-RED editor and click on `Next`
+  * On the `Browse available IBM Bluemix nodes` screen, click on `Next`
+  * On the `Finish the install` screen, click on Finish
+  * Click on `Go to your Node-RED flow editor` 
+  * Need to install following nodes before importing the flow:
+        * node-red-contrib-objectstore
+        * node-red-contrib-ibm-watson-iot  
+    To do this select ‘Manage Palette’ from the menu (top right), and then select the install tab  
+    in the palette. You can now search for new nodes to install and install the required ones.
+    (For more details, refer to: https://nodered.org/docs/getting-started/adding-nodes)
 
-Launch node-red flow editor. You need to install following nodes before importing the flow:
+#### Import Node-RED flow by importing the [configuration .json](configuration/node-red.json)  
+The flow json for Node-RED can be found under `node-red-flow` directory. 
+* Download the `configuration/node-red.json`
+* Open the file with a text editor and copy the contents to Clipboard
+* On the Node-RED flow editor, click the Menu and select Import -> Clipboard and paste the contents
 
-* node-red-contrib-objectstore
-* node-red-contrib-ibm-watson-iot  
+ ![](doc/source/images/import_nodered_flow.png)
+ <br/>
+ <br/>
+ 
+ #### Deploy the Node-RED flow by clicking on the `Deploy` button
 
-To do this select ‘Manage Palette’ from the menu (top right), and then select the install tab  
-in the palette. You can now search for new nodes to install and install the required ones.  
-
-For more details, you can refer to:
-https://nodered.org/docs/getting-started/adding-nodes
-
-#### Create Node-RED flow by importing the [configuration .json](configuration/node-red.json)  
+![](doc/source/images/deploy_nodered_flow.png)
 
 
 Node-red flow is designed as:  
